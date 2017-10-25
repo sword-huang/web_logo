@@ -116,10 +116,27 @@
         else if(res[0]=="dc")
         	dc(parseInt(res[1]));
 
+        if(x>width)
+        	x=x-width;
+        else if(x<=0)
+        	x=x+width;
+        x=Math.round(x);
+
+        if(y>height)
+        	y=y-height;
+        else if(y<0)
+        	y=y+height;
+        y=Math.round(y);
+
+        if(d>=2*Math.PI)
+        	d=d-2*Math.PI;
+        else if(d<=0)
+        	d=d+2*Math.PI;
+
         now_x=x;
         now_y=y;
 
-        app.angle=d/Math.PI*180;
+        app.angle=Math.round(d/Math.PI*180);
 		app.x=x;
 		app.y=y;
 		
