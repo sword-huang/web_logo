@@ -26,7 +26,7 @@ function cmd(cmd)
         ctx.stroke(); 
     }
     else if(res[0]=="setpc")
-    	setpc(res[1]);
+    	setpc(res[1],res[2], res[3]);
     else if(res[0]=="cs")
     {
         canvas.width = canvas.width; 
@@ -34,6 +34,8 @@ function cmd(cmd)
     }
     else if(res[0]=="home")
     	home();
+    else if(res[0]=="setpos")
+    	setpos(res[1], res[2]);
     else if(res[0]=="setx")
     	setx(res[1]);
     else if(res[0]=="sety")
@@ -110,13 +112,13 @@ function pd()
     ctx.stroke(); 
 }
 
-function setpc(color)
+function setpc(r,g,b)
 {
     pc=color;
 
     ctx.beginPath();
     ctx.moveTo(x,y);
-    ctx.strokeStyle = 'rgb'+pc;
+    ctx.strokeStyle = "rgb(" + r + "," + g + "," + b + ")";
     ctx.stroke(); 
 }
 
@@ -148,7 +150,7 @@ function sety(new_y)
     ctx.moveTo(x,y);
 }
 
-function setxy(new_x, new_y)
+function setpos(new_x, new_y)
 {
     x=parseInt(new_x);
     y=parseInt(new_y);
@@ -158,7 +160,7 @@ function setxy(new_x, new_y)
 
 function home()
 {
-	setxy(400, 300);
+	setpos(400, 300);
 }
 
 // Angle
