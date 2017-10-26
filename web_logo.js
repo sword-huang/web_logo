@@ -1,3 +1,89 @@
+function cmd(cmd)
+{
+    var now_X,now_y;
+
+    // alert(cmd);
+    var res = cmd.split(" ");
+    if(res[0]=="fd" || res[0]=="forward")
+    	forward(res[1]);
+    if(res[0]=="bk" || res[0]=="back")
+    	back(res[1]);
+    else if(res[0]=="lt" || res[0]=="left")
+    	left(parseInt(res[1]));
+    else if(res[0]=="rt" || res[0]=="right")
+    	right(parseInt(res[1]));
+    else if(res[0]=="pu" || res[0]=="penup")
+    	pu();
+    else if(res[0]=="pd" || res[0]=="pendown")
+    	pd();
+    else if(res[0]=="pe" || res[0]=="penerase")
+    {
+        pc="(255,255,255)";
+
+        ctx.beginPath();
+        ctx.moveTo(x,y);
+        ctx.strokeStyle = 'rgb'+pc;
+        ctx.stroke(); 
+    }
+    else if(res[0]=="setpc")
+    	setpc(res[1]);
+    else if(res[0]=="cs")
+    {
+        canvas.width = canvas.width; 
+        ctx.moveTo(x,y);
+    }
+    else if(res[0]=="home")
+    	home();
+    else if(res[0]=="setx")
+    	setx(res[1]);
+    else if(res[0]=="sety")
+    	sety(res[1]);
+    else if(res[0]=="seth" || res[0]=="sethead")
+    	seth(parseInt(res[1]));
+    else if(res[0]=="ulb")
+    	ulb(res[1]);
+    else if(res[0]=="urb")
+    	urb(res[1]);
+    else if(res[0]=="dlb")
+    	dlb(res[1]);
+    else if(res[0]=="drb")
+    	drb(res[1]);
+    else if(res[0]=="cb")
+    	cb(res[1]);
+    else if(res[0]=="cc" || res[0]=="circle")
+    	cc(parseInt(res[1]));
+    else if(res[0]=="lc")
+    	lc(parseInt(res[1]));
+    else if(res[0]=="rc")
+    	rc(parseInt(res[1]));
+    else if(res[0]=="uc")
+    	uc(parseInt(res[1]));
+    else if(res[0]=="dc")
+    	dc(parseInt(res[1]));
+
+    if(x>width)
+    	x=x-width;
+    else if(x<=0)
+    	x=x+width;
+    x=Math.round(x);
+
+    if(y>height)
+    	y=y-height;
+    else if(y<0)
+    	y=y+height;
+    y=Math.round(y);
+
+    now_x=x;
+    now_y=y;
+
+    app.angle=angle;
+	app.x=x;
+	app.y=y;
+	
+    app.input_cmd="";
+    app.logs.unshift(cmd);
+}
+
 function draw(x, y)
 {
 	if(pc!="")
