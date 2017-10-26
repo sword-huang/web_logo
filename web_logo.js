@@ -7,29 +7,7 @@ function draw(x, y)
     ctx.stroke(); 
 }
 
-function forward(len)
-{
-    x=x+len*Math.cos(d);
-    y=y-len*Math.sin(d);
-    draw(x, y);
-}
-
-function back(len)
-{
-    x=x-len*Math.cos(d);
-    y=y+len*Math.sin(d);
-    draw(x, y);
-}
-
-function left(ang)
-{
-	d=d+(Math.PI/180)*ang;
-}
-
-function right(ang)
-{
-    d=d-(Math.PI/180)*ang;
-}
+// Pen
 
 function pu()
 {
@@ -56,11 +34,20 @@ function setpc(color)
     ctx.stroke(); 
 }
 
-function home()
+// Position
+
+function forward(len)
 {
-	x=400;
-    y=300;
-    ctx.moveTo(x,y);
+    x=x+len*Math.cos(angle_value);
+    y=y-len*Math.sin(angle_value);
+    draw(x, y);
+}
+
+function back(len)
+{
+    x=x-len*Math.cos(angle_value);
+    y=y+len*Math.sin(angle_value);
+    draw(x, y);
 }
 
 function setx(new_x)
@@ -75,11 +62,51 @@ function sety(new_y)
     ctx.moveTo(x,y);
 }
 
-function seth(ang)
+function setxy(new_x, new_y)
 {
-    d=Math.PI/180*ang;
+    x=parseInt(new_x);
+    y=parseInt(new_y);
+
+    ctx.moveTo(x,y);
 }
 
+function home()
+{
+	setxy(400, 300);
+}
+
+// Angle
+
+function set_angle_value()
+{
+	angle_value=angle*Math.PI/180;	
+}
+
+function left(ang)
+{
+	angle=angle+ang;
+	if(angle>360)
+		angle=angle-360;
+	
+	set_angle_value();
+}
+
+function right(ang)
+{
+	angle=angle-ang;
+	if(angle<0)
+		angle=angle+360;
+
+	set_angle_value();
+}
+
+function seth(ang)
+{
+	angle=ang;
+	set_angle_value();
+}
+
+// Box
 function cb(len)
 {
 	pu();
@@ -130,6 +157,7 @@ function drb(len)
 	}
 }
 
+// Circle
 function cc(len)
 {
 	pu();
