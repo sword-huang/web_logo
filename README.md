@@ -1,12 +1,12 @@
 # web_logo
 
-I implement logo on web. User can input command to let turtle draw a picture.
+I implement Logo on web. User can input command to let turtle draw a picture.
 
 You can refer https://en.wikipedia.org/wiki/Logo_(programming_language) or http://el.media.mit.edu/logo-foundation/what_is_logo/index.html to understand about Logo.
 
-Now it implement below command:
+#Now implements below command
 
-Position Command
+##Position Command
 1. FD: Forward, FD 100
 2. BK: Back, BK 100
 3. HOME: Home, HOME
@@ -14,17 +14,17 @@ Position Command
 5. SETX: SETX, SETX 100
 6. SETY: SETY, SETY 100
 
-Angle Command
+##Angle Command
 1. LT: LEFT, LT 90
 2. RT: RIGHT, RT 90
 3. SETH: SETHEAD, SETH 60
 
-Pen Command
+##Pen Command
 1. PU: PENUP, PU
 2. PD: PENDOWN, PD
 3. SETPC: Set pen color, setpc 000 000 255
 
-Draw Command
+##Draw Command
 1. CS: Clear Screen
 2. CC: Center Circle, CC 100
 3. LC: Left Side Circle, LC 100
@@ -37,6 +37,7 @@ Draw Command
 10. DLB: Down Left Side Box, DLB 100
 11. DRB: Down Right Side Box, DRC 100
 
+# Unimplement Command
 
 No   英文指令       英文簡碼     中文        用法舉例                            用法說明
 1.    PENERASE    PE        筆擦        PE                     走過的地方會擦去
