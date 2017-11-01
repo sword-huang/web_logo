@@ -1,4 +1,4 @@
-# Web Logo
+| | # Web Logo
 
 I implement Logo on web. User can input command to let turtle draw a picture.
 
@@ -7,35 +7,43 @@ You can refer https://en.wikipedia.org/wiki/Logo_(programming_language) or http:
 # Now implements below command
 
 ## Position Command
-1. FD: Forward, FD 100
-2. BK: Back, BK 100
-3. HOME: Home, HOME
-4. SETPOS: SETPOS, SETPOS 100 100
-5. SETX: SETX, SETX 100
-6. SETY: SETY, SETY 100
+|No| Command | Description         | Usage         |
+| - | -      | -                   | -             |
+| 1 | FD     | 向前移動，Forward       | FD 100        |
+| 2 | BK     | 向後移動，Back          | BK 100        |
+| 3 | HOME   | 回到起始點，Home         | HOME          |
+| 4 | SETPOS | 設定位置，Set Position  | SETPOS 100 100 |
+| 5 | SETX   | 設定 X 軸位置，Set X     | SETX 100      |
+| 6 | SETY   | 設定 Y 軸位置，Set Y     | SETY 100      |
 
 ## Angle Command
-1. LT: LEFT, LT 90
-2. RT: RIGHT, RT 90
-3. SETH: SETHEAD, SETH 60
+|No| Command | Description | Usage|
+| -  | -       | -                           | -|
+| 1 | LT     | 向左轉幾度，Left |  LT 90 |
+| 2 | RT     | 向右轉幾度，Right |  RT 90 |
+| 3 | SETH | 設定角度為幾度，Set Head |  SETH 60 |
 
 ## Pen Command
-1. PU: PENUP, PU
-2. PD: PENDOWN, PD
-3. SETPC: Set pen color, setpc 000 000 255
+|No| Command | Description | Usage|
+| -  | -       | -                           | -|
+|1 | PU | Pen Up | PU |
+|2 | PD | Pen Down | PD |
+|3 | SETPC | Set Pen Color | SETPC 000 000 255 |
 
 ## Draw Command
-1. CS: Clear Screen
-2. CC: Center Circle, CC 100
-3. LC: Left Side Circle, LC 100
-4. RC: Right Side Circle, RC 100
-5. UC: Upper Side Circle, UC 100
-6. DC: Down Side Circle, DC 100
-7. CB: Center Box, CB 100
-8. ULB: Upper Left Side Box, ULB 100
-9. URB: Upper Right Side Box, URB 100
-10. DLB: Down Left Side Box, DLB 100
-11. DRB: Down Right Side Box, DRC 100
+|No| Command | Description | Usage|
+| -  | -       | -                           | -|
+| 1 | CS | Clear Screen |
+| 2 | CC | Center Circle | CC 100 |
+| 3 | LC | Left Side Circle | LC 100|
+| 4 | RC | Right Side Circle | RC 100 |
+| 5 | UC | Upper Side Circle | UC 100| 
+| 6 | DC | Down Side Circle | DC 100 |
+| 7 | CB | Center Box |  CB 100 |
+| 8 | ULB | Upper Left Side Box | ULB 100 |
+| 9 | URB | Upper Right Side Box | URB 100 |
+| 10 | DLB | Down Left Side Box | DLB 100 |
+| 11 | DRB | Down Right Side Box | DRC 100 |
 
 # Unimplement Command
 
