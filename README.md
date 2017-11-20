@@ -9,19 +9,19 @@ You can refer https://en.wikipedia.org/wiki/Logo_(programming_language) or http:
 ## Position Command
 |No| Command | Description         | Usage         |
 | - | -      | -                   | -             |
-| 1 | FD     | �V�e���ʡAForward       | FD 100        |
-| 2 | BK     | �V�Ჾ�ʡABack          | BK 100        |
-| 3 | HOME   | �^��_�l�I�AHome         | HOME          |
-| 4 | SETPOS | �]�w��m�ASet Position  | SETPOS 100 100 |
-| 5 | SETX   | �]�w X �b��m�ASet X     | SETX 100      |
-| 6 | SETY   | �]�w Y �b��m�ASet Y     | SETY 100      |
+| 1 | FD     | 向前移動，Forward       | FD 100        |
+| 2 | BK     | 向後移動，Back          | BK 100        |
+| 3 | HOME   | 回到起始點，Home         | HOME          |
+| 4 | SETXY  | 設定位置，Set Position  | SETXY 100 100 |
+| 5 | SETX   | 設定 X 軸位置，Set X     | SETX 100      |
+| 6 | SETY   | 設定 Y 軸位置，Set Y     | SETY 100      |
 
 ## Angle Command
 |No| Command | Description | Usage|
 | -  | -       | -                           | -|
-| 1 | LT     | �V����X�סALeft |  LT 90 |
-| 2 | RT     | �V�k��X�סARight |  RT 90 |
-| 3 | SETH | �]�w���׬��X�סASet Head |  SETH 60 |
+| 1 | LT     | 向左轉幾度，Left |  LT 90 |
+| 2 | RT     | 向右轉幾度，Right |  RT 90 |
+| 3 | SETH | 設定角度為幾度，Set Head |  SETH 60 |
 
 ## Pen Command
 |No| Command | Description | Usage|
@@ -47,21 +47,21 @@ You can refer https://en.wikipedia.org/wiki/Logo_(programming_language) or http:
 
 # Unimplement Command
 
-No   �^����O       �^��²�X     ����        �Ϊk�|��                            �Ϊk����
-1.    PENERASE    PE        ����        PE                     ���L���a��|���h
-2.    PENNORMAL   PENNORMAL �^�_���` PENNORMAL              �^�_���`
-3.    SHOWTURTLE  ST        �X�{        ST                     ��ܤp���t
-4.   HIDETURTLE  HT        ����        HT                     ����ܤp���t
-5.   CLEARSCREEN CS        �M��        CS                     �M��ø�ϰ�, �p���t�^���I(0,0)
-6.   CLEANTEXT   CT        �M��        CT                     �M����r��
-7.   CLEAN       CLEAN     �M��        CLEAN                  �M��ø�ϰ�, �p���t�d�b�̫᪺�a��
-8.   REPEAT      REPEAT    ����        REPEAT 4[FD 100 RT 90] ���ƬA�������O4���A�Φ��@�����
+No   英文指令       英文簡碼     中文        用法舉例                            用法說明
+1.    PENERASE    PE        筆擦        PE                     走過的地方會擦去
+2.    PENNORMAL   PENNORMAL 回復正常 PENNORMAL              回復正常
+3.    SHOWTURTLE  ST        出現        ST                     顯示小海龜
+4.   HIDETURTLE  HT        隱形        HT                     不顯示小海龜
+5.   CLEARSCREEN CS        清除        CS                     清除繪圖區, 小海龜回原點(0,0)
+6.   CLEANTEXT   CT        清文        CT                     清除文字區
+7.   CLEAN       CLEAN     清圖        CLEAN                  清除繪圖區, 小海龜留在最後的地方
+8.   REPEAT      REPEAT    重複        REPEAT 4[FD 100 RT 90] 重複括弧內指令4次，形成一正方形
 
-��L(���t)�e�ϫ��O
-No   �^����O             �^��²�X        ����                                                                            �Ϊk�|��                                          �Ϊk����
-2.    setscreencolor SETSC       �]�w�ù����C��                                                          setsc [000 255 000]                      �]�w�ù����C�⬰���
-3.   setfloodcolor  setfc       �]�w�d�򤺪����⪺�C��A�ݰt�XFILL���O��J�C��   SETFC [000 000 255]            �]�w�d�򤺪����⪺�C�⬰�Ŧ�C
-4.    FILL           FILL        ��J�C��                                                                    FILL                           ��J�C��
-5.    SETPENSIZE     SETPENSIZE  ����                                                                           SETPENSIZE [10 20]             �N���ʳ]��[10 20]�I
-1.   LABEL          LABEL       �L�r                                                                          LABEL "HI                      �bø�ϰϦL�X�r��"HI"
-11.   SOUND          SOUND       �n��                                                                          SOUND[262 100]                 �o�XDO���n��
+其他(海龜)畫圖指令
+No   英文指令             英文簡碼        中文                                                                            用法舉例                                          用法說明
+2.    setscreencolor SETSC       設定螢幕的顏色                                                          setsc [000 255 000]                      設定螢幕的顏色為綠色
+3.   setfloodcolor  setfc       設定範圍內的底色的顏色，需配合FILL指令填入顏色   SETFC [000 000 255]            設定範圍內的底色的顏色為藍色。
+4.    FILL           FILL        填入顏色                                                                    FILL                           填入顏色
+5.    SETPENSIZE     SETPENSIZE  筆粗                                                                           SETPENSIZE [10 20]             將筆粗設為[10 20]點
+1.   LABEL          LABEL       印字                                                                          LABEL "HI                      在繪圖區印出字串"HI"
+11.   SOUND          SOUND       聲音                                                                          SOUND[262 100]                 發出DO的聲音
