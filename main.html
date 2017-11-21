@@ -17,8 +17,14 @@
 	        <span>Angle: {{ angle }}</span>, X:<span>{{ x }}</span>, Y:<span>{{ y }}</span>
 	    </div>
 	    <div>
-	    	<input  type="text" size=40 v-model="input_cmd" v-on:keyup.enter="send1">
-	    	<button id="send" v-on:click="send1">Send</button>
+	    	<input type="checkbox" v-model="input_mode">Multi-Line<br>
+		    <div v-if="input_mode">
+		    	<textarea  id="input_area" v-model="input_cmd" rows="10" cols="40"></textarea>
+	    		<button id="send" v-on:click="send1">Send</button>
+		    </div>
+		    <div v-else>
+		    	<input id="input_line" type="text" size=40 v-model="input_cmd" v-on:keyup.enter="send1">
+	    	</div>
 	    </div>
 	    <div>
 	    	<ul>
@@ -46,13 +52,15 @@
     	data: {
     		logs: [],
     		input_cmd: '',
+    		input_mode: false,
     		angle: 90,
     		x: 400,
     		y: 300
     	},
 	    methods: {
     			send1: function () {
-    				cmd(this.input_cmd)
+    				//alert(this.input_cmd);
+    				cmd(this.input_cmd);
     			},
     			copy_cmd: function(event) {
     				this.input_cmd=event.target.innerText;

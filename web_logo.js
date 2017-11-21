@@ -34,8 +34,8 @@ function cmd(cmd)
     }
     else if(res[0]=="home")
     	home();
-    else if(res[0]=="setpos")
-    	setpos(res[1], res[2]);
+    else if(res[0]=="setxy")
+    	setxy(res[1], res[2]);
     else if(res[0]=="setx")
     	setx(res[1]);
     else if(res[0]=="sety")
@@ -150,7 +150,7 @@ function sety(new_y)
     ctx.moveTo(x,y);
 }
 
-function setpos(new_x, new_y)
+function setxy(new_x, new_y)
 {
     x=parseInt(new_x);
     y=parseInt(new_y);
@@ -160,7 +160,7 @@ function setpos(new_x, new_y)
 
 function home()
 {
-	setpos(400, 300);
+	setxy(400, 300);
 }
 
 // Angle
