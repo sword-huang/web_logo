@@ -1,16 +1,16 @@
-function cmd_parser(input_cmd)
+function cmd_parser(text_cmd)
 {
-	var cmd_list;
+	var line_cmd_array;
 
-	input_cmd=input_cmd.toLowerCase();
-	input_cmd=input_cmd.replace("\n\r", ";");
-	input_cmd=input_cmd.replace("\n", ";");
-	input_cmd=input_cmd.replace("\r", ";");
+	text_cmd=text_cmd.toLowerCase().replace("\n\r", ";").replace("\n", ";").replace("\r", ";");
 
-	cmd_list=input_cmd.split(";");
-	for (i in cmd_list) {
-		cmd(cmd_list[i].trim());
+	line_cmd_array=text_cmd.split(";");
+	for (i in line_cmd_array) {
+		cmd(line_cmd_array[i].trim());
 	} 
+	
+    app.input_cmd="";
+    app.logs.unshift(text_cmd);
 }
 
 function cmd(cmd)
@@ -96,9 +96,6 @@ function cmd(cmd)
     app.angle=angle;
 	app.x=x;
 	app.y=y;
-	
-    app.input_cmd="";
-    app.logs.unshift(cmd);
 }
 
 function draw(x, y)
