@@ -1,3 +1,18 @@
+function cmd_parser(input_cmd)
+{
+	var cmd_list;
+
+	input_cmd=input_cmd.toLowerCase();
+	input_cmd=input_cmd.replace("\n\r", ";");
+	input_cmd=input_cmd.replace("\n", ";");
+	input_cmd=input_cmd.replace("\r", ";");
+
+	cmd_list=input_cmd.split(";");
+	for (i in cmd_list) {
+		cmd(cmd_list[i].trim());
+	} 
+}
+
 function cmd(cmd)
 {
     var now_X,now_y;
@@ -114,11 +129,11 @@ function pd()
 
 function setpc(r,g,b)
 {
-    pc=color;
+    pc="(" + r + "," + g + "," + b + ")";
 
     ctx.beginPath();
     ctx.moveTo(x,y);
-    ctx.strokeStyle = "rgb(" + r + "," + g + "," + b + ")";
+    ctx.strokeStyle = "rgb" + pc;
     ctx.stroke(); 
 }
 

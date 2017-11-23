@@ -60,7 +60,7 @@
 	    methods: {
     			send1: function () {
     				//alert(this.input_cmd);
-    				cmd(this.input_cmd);
+    				cmd_parser(this.input_cmd);
     			},
     			copy_cmd: function(event) {
     				this.input_cmd=event.target.innerText;
@@ -72,7 +72,7 @@
 
     setxy(app.x,app.y);
     seth(app.angle);
-	setpc(pc);
+	setpc(0, 0, 0);
 </script>
 
 </body>
