@@ -4,12 +4,12 @@ I implement Logo on web. User can input command to let turtle draw a picture.
 
 You can refer https://en.wikipedia.org/wiki/Logo_(programming_language) or http://el.media.mit.edu/logo-foundation/what_is_logo/index.html to understand about Logo.
 
-You try it at https://sword-huang.github.io/web_logo/main.html
+You can try it to click https://sword-huang.github.io/web_logo/main.html
 
 # Now implements below command
 
 ## Position Command
-|No| Command | Description         | Usage         |
+|No| Command | Description         | Usage         |s
 | - | -      | -                   | -             |
 | 1 | FD     | 向前移動，Forward       | FD 100        |
 | 2 | BK     | 向後移動，Back          | BK 100        |
