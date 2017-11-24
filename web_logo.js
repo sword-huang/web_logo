@@ -1,4 +1,4 @@
-function cmd_parser(text_cmd)
+function parser_text_cmd(text_cmd)
 {
 	var line_cmd_array;
 
@@ -6,14 +6,14 @@ function cmd_parser(text_cmd)
 
 	line_cmd_array=text_cmd.split(";");
 	for (i in line_cmd_array) {
-		cmd(line_cmd_array[i].trim());
+		parse_line_cmd(line_cmd_array[i].trim());
 	} 
 	
     app.input_cmd="";
     app.logs.unshift(text_cmd);
 }
 
-function cmd(cmd)
+function parse_line_cmd(cmd)
 {
     var now_X,now_y;
 
