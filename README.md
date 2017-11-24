@@ -9,7 +9,7 @@ You can try it to click https://sword-huang.github.io/web_logo/main.html
 # Now implements below command
 
 ## Position Command
-|No| Command | Description         | Usage         |s
+|No| Command | Description         | Usage         |
 | - | -      | -                   | -             |
 | 1 | FD     | 向前移動，Forward       | FD 100        |
 | 2 | BK     | 向後移動，Back          | BK 100        |
