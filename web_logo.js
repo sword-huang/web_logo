@@ -4,13 +4,18 @@ function parser_text_cmd(text_cmd)
 
 	text_cmd=text_cmd.toLowerCase().replace("\n\r", ";").replace("\n", ";").replace("\r", ";");
 
-	line_cmd_array=text_cmd.split(";");
-	for (i in line_cmd_array) {
-		parse_line_cmd(line_cmd_array[i].trim());
-	} 
-	
-    app.input_cmd="";
-    app.logs.unshift(text_cmd);
+	if(text_cmd=="")
+		alert("Can't get any command!");
+	else
+	{
+		line_cmd_array=text_cmd.split(";");
+		for (i in line_cmd_array) {
+			parse_line_cmd(line_cmd_array[i].trim());
+		} 
+		
+		app.input_cmd="";
+		app.logs.unshift(text_cmd);
+	}
 }
 
 function parse_line_cmd(cmd)
@@ -108,7 +113,6 @@ function draw(x, y)
 }
 
 // Pen
-
 function pu()
 {
     pc="";
@@ -135,7 +139,6 @@ function setpc(r,g,b)
 }
 
 // Position
-
 function forward(len)
 {
     x=x+len*Math.cos(angle_value);
@@ -176,7 +179,6 @@ function home()
 }
 
 // Angle
-
 function set_angle_value()
 {
 	angle_value=angle*Math.PI/180;	

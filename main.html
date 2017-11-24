@@ -8,7 +8,9 @@
 </head>
 
 <body>
-	<div id="header">Web Logo</div>
+	<div id="header">
+		Web Logo
+	</div>
 	<div id="body">
         <canvas id="myCanvas" width="800" height="600" style="border:1px solid #c3c3c3;">Your browser does not support the canvas element.</canvas>
 	</div>
@@ -19,14 +21,14 @@
 	    <div>
 	    	<input type="checkbox" v-model="input_mode">Multi-Line<br>
 		    <div v-if="input_mode">
-		    	<textarea  id="input_area" v-model="input_cmd" rows="10" cols="40"></textarea>
+		    	<textarea  id="input_area" v-model="input_cmd" rows="15" cols="45" style="font-size:13px; font-family: Arial, sans-serif;"></textarea>
 	    		<button id="send" v-on:click="send1">Send</button>
 		    </div>
 		    <div v-else>
-		    	<input id="input_line" type="text" size=40 v-model="input_cmd" v-on:keyup.enter="send1">
+		    	<input id="input_line" type="text" size=60 v-model="input_cmd" v-on:keyup.enter="send1" style="font-family: Arial, sans-serif;">
 	    	</div>
 	    </div>
-	    <div>
+	    <div style="height: 200px;" id="log">
 	    	<ul>
   				<li v-for="log in logs" v-on:click="copy_cmd">
     				{{ log }}

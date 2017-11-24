@@ -1,14 +1,13 @@
-<style type="text/css">
-#header
-{
-	width:1200px;
-	height:40px;
-	text-align:center;
-	line-height:40px;
-	font-size:40px;
-	color:#fffaf3;
+#header{
+	width: 1200px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 40px;
+	font-family: Arial, sans-serif; 
+	color: #fffaf3;
 	font-weight:bold;
-	background-color:#f9c81e;
+	background-color: #90c0ee;
 }
 
 #body{
@@ -18,6 +17,7 @@
 	text-align:center;
 	font-size:15px;
 	color:#ffffff;
+	font-family: Arial, sans-serif; 
 	font-weight:bold;
 	background-color:#cecece;
 }
@@ -27,10 +27,23 @@
 	width:400px;
 	height:600px;
 	text-align:left;
-	font-size:15px;
-	color:#f9c81e;
+	font-size:12px;
+	color:#000000;
+	font-family: Arial, sans-serif; 
 	font-weight:bold;
 	background-color:#fffaf3;
+	line-height: 20px;
+}
+
+#log{
+	overflow:	auto;
+}
+
+#log ul{
+	padding: 0px;
+}
+
+#log ul li{
 }
 
 #footer{
@@ -40,7 +53,7 @@
 	line-height:40px;
 	font-size:15px;
 	color:#fffaf3;
+	font-family: Arial, sans-serif; 
 	font-weight:bold;
-	background-color:#f9c81e;
+	background-color:#8ce1ec;
 }
-</style>
