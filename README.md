@@ -1,8 +1,10 @@
-| | # Web Logo
+# Web Logo
 
 I implement Logo on web. User can input command to let turtle draw a picture.
 
 You can refer https://en.wikipedia.org/wiki/Logo_(programming_language) or http://el.media.mit.edu/logo-foundation/what_is_logo/index.html to understand about Logo.
+
+You try it at https://sword-huang.github.io/web_logo/main.html
 
 # Now implements below command
 
@@ -55,7 +57,7 @@ No   英文指令       英文簡碼     中文        用法舉例             
 5.   CLEARSCREEN CS        清除        CS                     清除繪圖區, 小海龜回原點(0,0)
 6.   CLEANTEXT   CT        清文        CT                     清除文字區
 7.   CLEAN       CLEAN     清圖        CLEAN                  清除繪圖區, 小海龜留在最後的地方
-8.   REPEAT      REPEAT    重複        REPEAT 4[FD 100 RT 90] 重複括弧內指令4次，形成一正方形
+8.   REPEAT      REPEAT    重複        REPEAT 4[FD 100 RT 90] 重複括弧內指令4次，形成一正方形, REPCOUNT 
 
 其他(海龜)畫圖指令
 No   英文指令             英文簡碼        中文                                                                            用法舉例                                          用法說明
