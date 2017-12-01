@@ -1,24 +1,48 @@
 function parser_text_cmd(text_cmd)
 {
+	if(text_cmd=="")
+		alert("Can't get any command!");
+	else
+		line_parser(text_cmd);
+	
+	app.input_cmd="";
+	app.logs.unshift(text_cmd);
+}
+
+function in_array(needle, haystack) {
+    for(var i in haystack) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+
+function line_parser(text_cmd)
+{
 	var line_cmd_array;
 
 	text_cmd=text_cmd.toLowerCase().replace("\n\r", ";").replace("\n", ";").replace("\r", ";");
 
-	if(text_cmd=="")
-		alert("Can't get any command!");
-	else
-	{
-		line_cmd_array=text_cmd.split(";");
-		for (i in line_cmd_array) {
-			parse_line_cmd(line_cmd_array[i].trim());
-		} 
-		
-		app.input_cmd="";
-		app.logs.unshift(text_cmd);
-	}
+	line_cmd_array=text_cmd.split(";");
+	for (i in line_cmd_array) {
+		execute_cmd(line_cmd_array[i].trim());
+	} 
 }
 
-function parse_line_cmd(cmd)
+function word_parser(text_cmd)
+{
+	var line_cmd_array, cmd;
+	var cmd_list = ['fd', 'bk', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
+
+	text_cmd=text_cmd.toLowerCase().replace("\n\r", " ").replace("\n", " ").replace("\r", " ");
+	line_cmd_array=text_cmd.split(" ");
+	for (i in line_cmd_array) {
+		cmd=line_cmd_array[i].trim();
+		if(in_array(cmd, cmd_list))
+			execute_cmd(line_cmd_array[i].trim());
+	}	
+}
+
+function execute_cmd(cmd)
 {
     var now_X,now_y;
 
